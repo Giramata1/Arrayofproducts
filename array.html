@@ -10,7 +10,7 @@
   <div id="productlist">
     <h2>Product List</h2>
     <ul>
-      <!-- Display products dynamically here -->
+      
     </ul>
   </div>
 
@@ -29,10 +29,10 @@
 ];
   
 
-    // Reference to the div where the product list will be displayed
+    
     const productListDiv = document.getElementById("productlist");
 
-    // Loop through the products array and display each product inside the div
+    
     products.forEach(product => {
       const productItem = document.createElement("p");
       productItem.textContent = `product name: ${product.name}, product price: $${product.price} , product category ${product.category}`;
