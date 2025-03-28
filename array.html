@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List Of Products</title>
+</head>
+<body>
+
+  <div id="productlist">
+    <h2>Product List</h2>
+    <ul>
+      <!-- Display products dynamically here -->
+    </ul>
+  </div>
+
+  <script>
+     const products = [
+    { name: "Laptop", price: 800, category: "Electronics" },
+    { name: "Phone", price: 500, category: "Electronics" },
+    { name: "Table", price: 200, category: "Furniture" },
+    { name: "Chair", price: 100, category: "Furniture" },
+    { name: "Headphones", price: 50, category: "Electronics" },
+    { name: "Shoes", price: 70, category: "Clothing" },
+    { name: "Jacket", price: 120, category: "Clothing" },
+    { name: "Watch", price: 250, category: "Accessories" },
+    { name: "Backpack", price: 90, category: "Accessories" },
+    { name: "Sofa", price: 600, category: "Furniture" }
+];
+  
+
+    // Reference to the div where the product list will be displayed
+    const productListDiv = document.getElementById("productlist");
+
+    // Loop through the products array and display each product inside the div
+    products.forEach(product => {
+      const productItem = document.createElement("p");
+      productItem.textContent = `product name: ${product.name}, product price: $${product.price} , product category ${product.category}`;
+      productListDiv.appendChild(productItem);
+    });
+   </script>
+
+</body>
+</html>
